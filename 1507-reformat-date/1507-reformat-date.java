@@ -7,7 +7,7 @@ class Solution {
         
         // splits date
         String[] input = date.split(" ");
-        System.out.println(Arrays.toString(input));
+        //System.out.println(Arrays.toString(input));
         
         //day
         input[0] = input[0].replaceAll("[^0-9]", ""); // day
@@ -19,7 +19,7 @@ class Solution {
         input[1] = String.format("%02d" , Integer.parseInt(input[1]));
 
                         // year        month        day
-        String output = input[2]+"-"+input[1]+"-"+input[0];
-        return output;
+        return input[2]+"-"+input[1]+"-"+input[0];
+        //return output;
     }
 }
