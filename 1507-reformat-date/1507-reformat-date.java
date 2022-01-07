@@ -45,7 +45,6 @@ class Solution {
         //day
         input[0] = input[0].replaceAll("[^0-9]", ""); // day
         input[0] = String.format("%02d" , Integer.parseInt(input[0]));
-        
     
 
                 // year        month        day
