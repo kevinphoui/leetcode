@@ -4,12 +4,13 @@ class Solution {
         if (s.length() % 2 != 0){
             return false;
         }
-        
-        
+        // Creates stack
         Stack<Character> stack = new Stack<Character>();
         
+        // iterates through string
         for (int i = 0; i < s.length(); i++){
             switch (s.charAt(i)){
+                // pushes onto stack
                 case '[':
                     stack.push(s.charAt(i));
                     break;
@@ -20,6 +21,7 @@ class Solution {
                     stack.push(s.charAt(i));
                     break;
                 
+                // removes from stack
                 case ']':
                     if (stack.size() == 0 || stack.pop() != '['){
                         return false;
@@ -36,7 +38,6 @@ class Solution {
                     }
                     break;
             }
-            
         }
         if (stack.size() != 0){
                 return false;
