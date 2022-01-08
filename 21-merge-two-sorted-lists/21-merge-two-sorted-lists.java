@@ -11,7 +11,7 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode merge;
-        // if list1 is less than list[j], adds list[i] & i++, else adds list[j] & j++.
+        
         
         // base case
         if (list1 == null && list2 == null){
@@ -26,6 +26,7 @@ class Solution {
         
         
         // recursive case
+        // if list1 is less than list2, adds list1 & list.next, else adds list2 & list2.next
         if (list1.val < list2.val){
             merge = list1;
             merge.next = mergeTwoLists(list1.next, list2);
